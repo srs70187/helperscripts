@@ -1,0 +1,10 @@
+#first update and dist upgrade
+build-essential
+libssl-dev
+python2.7
+python-pip
+python-dev
+ipython
+ipython-notebook
+wkhtmltopdf
+

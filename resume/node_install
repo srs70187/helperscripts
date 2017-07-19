@@ -1,0 +1,9 @@
+#install nvm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+#then setup nvm to use the most recent lts version of nodejs
+nvm ls-remote
+nvm use <version>
+
+#to install npm packages use the g flag
+npm install -g <package>
+
