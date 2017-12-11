@@ -1,0 +1,20 @@
+getting ssh to work can be a nightmare. the following steps worked for me:
+
+1. ssh-keygen -t rsa -b 4096 -C "steven.r.soloway@gmail.com" 
+    - creates a 4096 bit RSA key in the ~/.ssh directory with name id_rsa
+2. cat ~/.ssh/id_rsa.pub and copy this to github ssh keys page in settings
+3. ssh-add -l 
+    - this will add the key to the ssh-agent
+4. ssh -vT git@github.com to see if ssh is working
+    - for me, this would always time out, regardless of creating special entries in a config file
+5. if (4) isn't working, try to ssh -T -p 443 git@ssh.github.com
+6. assuming this worked, now create a config file with the following:
+ 
+"Host github.com
+  Hostname ssh.github.com
+  Port 443"
+
+and add/create file called ~/.ssh/config
+
+7. ssh -vT git@github.com should work
+
