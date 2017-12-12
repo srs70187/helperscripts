@@ -1,0 +1,10 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+#this will install docker with the username docker
+# if you use sudo you can run docker commands without having to add user to docker group
+
+# but on GCE, you can log out and in without using password if you su with sudo:
+
+sudo usermod -aG docker ${USER}
+sudo su - $USER
