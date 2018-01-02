@@ -1,0 +1,17 @@
+sudo apt-get install libcurl4-openssl-dev \
+  libxml2-dev \
+  libcairo2-dev \
+  libsqlite-dev \
+  libmariadbd-dev \
+  libmariadb-client-lgpl-dev \
+  libpq-dev \
+  libssh2-1-dev -y
+
+
+Rscript -e "install.packages('tidyverse',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('tensorflow',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('keras',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('jsonlite',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('tidytext',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('future',repos='https://cloud.r-project.org/')"
+Rscript -e "install.packages('Hmisc',repos='https://cloud.r-project.org/')"
